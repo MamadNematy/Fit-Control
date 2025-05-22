@@ -98,11 +98,9 @@ body.dark-theme #date-filter {
 
 /* ====== Sidebar ====== */
 .sidebar {
-  width: 220px;
-  display: none;
   background-color: var(--card-light);
+  padding: 1rem;
   border-left: 4px solid var(--primary);
-  padding: 2rem 1rem;
   transition: var(--transition);
 }
 
@@ -110,6 +108,7 @@ body.dark-theme #date-filter {
   .sidebar {
     display: flex;
     flex-direction: column;
+    width: 220px;
   }
 }
 
@@ -231,4 +230,15 @@ body.dark-theme .card {
     display: flex;
     flex-direction: column;
   }
+}
+
+.back-button {
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
 }
