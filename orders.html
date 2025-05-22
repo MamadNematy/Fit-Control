@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت سفارشات | FitControl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/orders.css">
+    <script src="js/orders.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>مدیریت سفارشات</h1>
+
+        <div class="order-actions">
+            <select id="statusFilter">
+                <option value="all">همه وضعیت‌ها</option>
+                <option value="پردازش">در حال پردازش</option>
+                <option value="ارسال">ارسال شده</option>
+                <option value="لغو">لغو شده</option>
+            </select>
+            <button id="addOrderBtn">ثبت سفارش جدید</button>
+        </div>
+
+        <table id="orderTable">
+            <thead>
+                <tr>
+                    <th>شماره</th>
+                    <th>مشتری</th>
+                    <th>مبلغ</th>
+                    <th>تاریخ</th>
+                    <th>وضعیت</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="orderModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>افزودن سفارش</h2>
+                <input type="text" id="orderCustomer" placeholder="نام مشتری">
+                <input type="number" id="orderAmount" placeholder="مبلغ (تومان)">
+                <select id="orderStatus">
+                    <option value="پردازش">در حال پردازش</option>
+                    <option value="ارسال">ارسال شده</option>
+                    <option value="لغو">لغو شده</option>
+                </select>
+                <button id="saveOrderBtn">ذخیره</button>
+                <button id="closeOrderModal">بستن</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
