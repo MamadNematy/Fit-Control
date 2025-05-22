@@ -1,5 +1,3 @@
-/* ===== Responsive Styles for FitControl Admin Dashboard ===== */
-
 @media (max-width: 1200px) {
   .cards {
     flex-direction: row;
@@ -17,10 +15,10 @@
   }
 
   .sidebar {
+    display: none !important;
     width: 100%;
     border-left: none;
     border-bottom: 4px solid var(--primary);
-    display: none;
     flex-direction: column;
     align-items: center;
     background-color: var(--card-light);
@@ -31,7 +29,7 @@
   }
 
   .sidebar.open {
-    display: flex;
+    display: flex !important;
   }
 
   .hamburger {
@@ -39,6 +37,13 @@
     font-size: 1.5rem;
     cursor: pointer;
     padding: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+    color: var(--primary);
+    background-color: transparent;
+    border: none;
   }
 
   .sidebar .logo {
@@ -98,7 +103,6 @@
   }
 }
 
-/* ===== Hamburger Button (always hidden on desktop) ===== */
 .hamburger {
   display: none;
   position: absolute;
