@@ -1,0 +1,131 @@
+/* ====== Root & Reset ====== */
+:root {
+  --bg-light: #f4f6f8;
+  --bg-dark: #121212;
+  --card-light: #ffffff;
+  --card-dark: #1e1e1e;
+  --text-light: #1c1c1c;
+  --text-dark: #e0e0e0;
+  --primary: #4f46e5;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --border-light: #d1d5db;
+  --border-dark: #2a2a2a;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  display: flex;
+  min-height: 100vh;
+  transition: var(--transition);
+}
+
+body.dark-theme {
+  background-color: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+/* ====== Sidebar ====== */
+.sidebar {
+  width: 220px;
+  background-color: var(--card-light);
+  border-left: 4px solid var(--primary);
+  padding: 2rem 1rem;
+  transition: var(--transition);
+}
+
+body.dark-theme .sidebar {
+  background-color: var(--card-dark);
+}
+
+.sidebar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.nav {
+  list-style: none;
+}
+
+.nav li {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.nav li.active,
+.nav li:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* ====== Main Area ====== */
+.main {
+  flex: 1;
+  padding: 2rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topbar h1 {
+  font-size: 1.5rem;
+}
+
+#theme-toggle {
+  padding: 0.5rem 1rem;
+  background-color: var(--primary);
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.cards {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  flex: 1 1 200px;
+  transition: var(--transition);
+}
+
+body.dark-theme .card {
+  background-color: var(--card-dark);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.card p {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
