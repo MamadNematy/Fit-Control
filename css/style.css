@@ -105,6 +105,13 @@ body.dark-theme #date-filter {
   transition: var(--transition);
 }
 
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .sidebar.open {
   display: flex;
 }
