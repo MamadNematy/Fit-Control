@@ -1,0 +1,32 @@
+/* ====== Statistics Charts Styling ====== */
+.charts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-box {
+  background-color: var(--card-light);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+body.dark-theme .chart-box {
+  background-color: var(--card-dark);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+}
+
+.chart-box h3 {
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+canvas {
+  width: 100% !important;
+  height: 250px !important;
+}
