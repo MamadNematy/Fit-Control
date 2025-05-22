@@ -242,3 +242,22 @@ body.dark-theme .card {
   cursor: pointer;
   font-size: 0.9rem;
 }
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.user-profile img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-profile .info {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
