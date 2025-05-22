@@ -1,16 +1,20 @@
-/* ====== Root & Reset ====== */
 :root {
   --bg-light: #f4f6f8;
   --bg-dark: #121212;
+
   --card-light: #ffffff;
   --card-dark: #1e1e1e;
+
   --text-light: #333;
   --text-dark: #e0e0e0;
+
   --primary: #4f46e5;
   --success: #22c55e;
   --danger: #ef4444;
+
   --border-light: #d1d5db;
   --border-dark: #2a2a2a;
+
   --transition: all 0.3s ease;
 }
 
@@ -30,9 +34,13 @@ body {
 }
 
 body.dark-theme {
-  --text-light: #f0f0f0;
   background-color: var(--bg-dark);
   color: var(--text-dark);
+
+  --bg-light: #121212;
+  --card-light: #1e1e1e;
+  --text-light: #e0e0e0;
+  --border-light: #2a2a2a;
 }
 
 /* ====== Sidebar ====== */
