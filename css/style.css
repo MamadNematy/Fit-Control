@@ -43,6 +43,59 @@ body.dark-theme {
   --border-light: #2a2a2a;
 }
 
+/* ===== Topbar User Info & Controls ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.user-info .status {
+  font-size: 0.8rem;
+  color: var(--success);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#notification-toggle,
+#theme-toggle,
+#date-filter {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: var(--card-light);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#date-filter {
+  padding-right: 0.6rem;
+}
+
+body.dark-theme #notification-toggle,
+body.dark-theme #theme-toggle,
+body.dark-theme #date-filter {
+  background-color: var(--card-dark);
+  color: var(--text-light);
+  border-color: var(--border-dark);
+}
+
 /* ====== Sidebar ====== */
 .sidebar {
   width: 220px;

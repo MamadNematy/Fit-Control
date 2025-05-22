@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitControl | فیت کنترل</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
     <script src="js/theme.js" defer></script>
     <script src="js/activeLink.js" defer></script>
 </head>
 
 <body>
-
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
     <div class="sidebar">
         <div class="logo">فیت کنترل</div>
         <ul class="nav">
@@ -26,8 +27,21 @@
 
     <div class="main">
         <div class="topbar">
-            <h1>داشبورد مدیریت</h1>
-            <button id="theme-toggle">تغییر تم</button>
+            <div class="user-info">
+                <span>👤 مدیر سیستم</span>
+                <span class="status logged-in">وضعیت: وارد شده</span>
+            </div>
+            <div class="actions">
+                <label for="date-filter">📅 بازه زمانی:</label>
+                <select id="date-filter">
+                    <option>امروز</option>
+                    <option selected>ماه جاری</option>
+                    <option>سه ماه اخیر</option>
+                    <option>سال جاری</option>
+                </select>
+                <button id="notification-toggle">🔔 اعلان‌ها</button>
+                <button id="theme-toggle">🌓 تم</button>
+            </div>
         </div>
 
         <div class="cards">
@@ -45,7 +59,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
