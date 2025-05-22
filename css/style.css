@@ -99,6 +99,7 @@ body.dark-theme #date-filter {
 /* ====== Sidebar ====== */
 .sidebar {
   width: 220px;
+  display: none;
   background-color: var(--card-light);
   border-left: 4px solid var(--primary);
   padding: 2rem 1rem;
@@ -222,4 +223,12 @@ body.dark-theme .card {
 .card p {
   font-size: 1.25rem;
   font-weight: bold;
+}
+
+/* Show sidebar in desktop */
+@media (min-width: 769px) {
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+  }
 }
