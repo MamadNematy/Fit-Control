@@ -4,7 +4,7 @@
   --bg-dark: #121212;
   --card-light: #ffffff;
   --card-dark: #1e1e1e;
-  --text-light: #1c1c1c;
+  --text-light: #333;
   --text-dark: #e0e0e0;
   --primary: #4f46e5;
   --success: #22c55e;
@@ -30,6 +30,7 @@ body {
 }
 
 body.dark-theme {
+  --text-light: #f0f0f0;
   background-color: var(--bg-dark);
   color: var(--text-dark);
 }
@@ -70,7 +71,7 @@ body.dark-theme .sidebar {
   color: var(--text-light);
   background-color: transparent;
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .nav a:hover {
@@ -79,6 +80,16 @@ body.dark-theme .sidebar {
 }
 
 .nav a.active {
+  background-color: var(--primary);
+  color: white;
+}
+
+body.dark-theme .nav a {
+  color: #f0f0f0;
+}
+
+body.dark-theme .nav a:hover,
+body.dark-theme .nav a.active {
   background-color: var(--primary);
   color: white;
 }
