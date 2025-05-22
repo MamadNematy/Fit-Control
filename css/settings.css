@@ -1,0 +1,87 @@
+/* ====== Settings Page Styling ====== */
+.settings-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: var(--card-light);
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  transition: var(--transition);
+}
+
+body.dark-theme .settings-section {
+  background-color: var(--card-dark);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.03);
+}
+
+.settings-section h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.settings-section p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+body.dark-theme .settings-section p {
+  color: var(--text-dark);
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.toggle input[type="checkbox"] {
+  width: 40px;
+  height: 20px;
+  appearance: none;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.toggle input[type="checkbox"]:checked {
+  background-color: var(--primary);
+}
+
+.toggle input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 1px;
+  left: 1px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.toggle input[type="checkbox"]:checked::before {
+  transform: translateX(20px);
+}
+
+.label-text {
+  font-size: 0.95rem;
+}
+
+#languageSelect {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: white;
+  color: #333;
+  transition: var(--transition);
+}
+
+body.dark-theme #languageSelect {
+  background-color: #2a2a2a;
+  color: #eee;
+  border-color: var(--border-dark);
+}
