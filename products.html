@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت محصولات | FitControl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/products.css">
+    <script src="js/products.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>مدیریت محصولات</h1>
+
+        <div class="product-actions">
+            <input type="text" id="searchProduct" placeholder="جستجوی محصول...">
+            <button id="addProductBtn">افزودن محصول</button>
+        </div>
+
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>قیمت</th>
+                    <th>دسته‌بندی</th>
+                    <th>تصویر</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="productModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>افزودن محصول جدید</h2>
+                <input type="text" id="productName" placeholder="نام محصول">
+                <input type="number" id="productPrice" placeholder="قیمت">
+                <input type="text" id="productCategory" placeholder="دسته‌بندی">
+                <input type="text" id="productImage" placeholder="آدرس تصویر (URL)">
+                <button id="saveProductBtn">ذخیره</button>
+                <button id="closeProductModal">بستن</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

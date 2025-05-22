@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدیریت کاربران | FitControl</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/users.css">
+    <script src="js/users.js" defer></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>مدیریت کاربران</h1>
+
+        <div class="user-actions">
+            <input type="text" id="searchInput" placeholder="جستجو کاربر...">
+            <button id="addUserBtn">افزودن کاربر</button>
+        </div>
+
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>نام</th>
+                    <th>ایمیل</th>
+                    <th>نقش</th>
+                    <th>عملیات</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <div id="userModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>افزودن کاربر جدید</h2>
+                <input type="text" id="nameInput" placeholder="نام">
+                <input type="email" id="emailInput" placeholder="ایمیل">
+                <select id="roleInput">
+                    <option value="ادمین">ادمین</option>
+                    <option value="کاربر">کاربر</option>
+                </select>
+                <button id="saveUserBtn">ذخیره</button>
+                <button id="closeModal">بستن</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
