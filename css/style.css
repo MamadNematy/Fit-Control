@@ -105,6 +105,10 @@ body.dark-theme #date-filter {
   transition: var(--transition);
 }
 
+.sidebar.open {
+  display: flex;
+}
+
 body.dark-theme .sidebar {
   background-color: var(--card-dark);
 }
